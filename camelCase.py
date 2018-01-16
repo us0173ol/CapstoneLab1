@@ -4,9 +4,14 @@ def dislplay_banner():
     stars = '*' * len(msg)
     print ('\n', stars, '\n', msg, '\n', stars, '\n')
 
+def display_instructions():
+    msg = "Please enter a sentance or text to convert it to camelCase"
+    lines = "_" * len(msg)
+    print('\n', lines, '\n', msg, '\n', lines, '\n')
+    
 dislplay_banner()
+display_instructions()
 
-print('Please enter a sentance or text to convert it to camelCase ')
 string = input()
 #get input from user
 newString = string.lower().split(' ')
