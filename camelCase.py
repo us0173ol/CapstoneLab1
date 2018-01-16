@@ -1,3 +1,11 @@
+def dislplay_banner():
+    '''Display program name in a banner'''
+    msg = 'AWESOME camelCaseGenerator PROGRAM'
+    stars = '*' * len(msg)
+    print ('\n', stars, '\n', msg, '\n', stars, '\n')
+
+dislplay_banner()
+
 print('Please enter a sentance or text to convert it to camelCase ')
 string = input()
 #get input from user
