@@ -9,13 +9,16 @@ def display_instructions():
     lines = "_" * len(msg)
     print('\n', lines, '\n', msg, '\n', lines, '\n')
 
+def lowercase(userString):
+    newString = userString.lower()
+    return newString
 
-def camel_Case(userString):
+def camel_Case(newString):
 
-    newString = userString.lower().split(' ')
+    lowerString = newString.split(' ')
     #split the user input up by the spaces provided
     #while making all input lowercase
-    numOfWords = newString.__len__()
+    numOfWords = lowerString.__len__()
     #figure out how many words there are
     count = 0
     #use count to keep the first word lowercase
@@ -23,7 +26,7 @@ def camel_Case(userString):
 
     while numOfWords > count:
         #do not exceed the number of words to keep list in range
-        eachWord = newString[count]
+        eachWord = lowerString[count]
 
         if count != 0:
             #add each word to the list and capitalize the first letter
@@ -44,7 +47,8 @@ def main():
     dislplay_banner()
     display_instructions()
     userString = input('')
-    finalCamelCase = camel_Case(userString)
+    newString = lowercase(userString)
+    finalCamelCase = camel_Case(newString)
     print(finalCamelCase)
 
 
